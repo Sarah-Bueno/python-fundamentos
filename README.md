@@ -10,6 +10,8 @@ Repositório destinado ao armazenamento de exercícios e atividades desenvolvida
 * Estruturas condicionais
 * Estruturas de repetição
 * Listas
+* NumPy
+* Pandas
 
 ## Objetivo
 
