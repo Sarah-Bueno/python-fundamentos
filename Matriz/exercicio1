@@ -1,0 +1,70 @@
+"""
+Dada uma matriz M(10, 20), escreva um programa que
+realize a seguinte sequência de operações:
+• preencha a matriz por leitura;
+• imprima seus valores na forma de uma matriz;
+• procure e imprima o maior elemento de cada linha da matriz;
+• calcule e imprima a média dos elementos de cada coluna;
+• calcule e imprima o produto de todos os elementos diferentes de zero;
+• conte e imprima quantos elementos são negativos;
+• informe qual a posição ocupada (linha-coluna) por um determinado elemento cujo valor
+será lido pelo programa.
+"""
+l, c = 10, 20
+
+M = []
+
+# Preenche a matriz
+for i in range(l):
+    L = []
+    for j in range(c):
+        val = int(input("Informe um valor: "))
+        L.append(val)
+    M.append(L)
+
+encontre = int(input("Informe um valor para encontrar: "))
+
+cont = 0
+encontrou = "não existe na matriz"
+produto = 1
+
+# Imprime a matriz
+print("Matriz:")
+for item in M:
+    print(item)
+
+# Maior elemento de cada linha
+print("Maior de cada linha:")
+for i in range(l):
+    maior = M[i][0]
+    for j in range(c):
+        if M[i][j] > maior:
+            maior = M[i][j]
+    print(maior)
+
+# Média de cada coluna
+print("Média de cada coluna:")
+for j in range(c):
+    soma = 0
+    for i in range(l):
+        soma += M[i][j]
+    media = soma / l
+    print(media)
+
+# Produto dos elementos diferentes de zero,
+# quantidade de negativos e busca do elemento
+for i in range(l):
+    for j in range(c):
+
+        if M[i][j] != 0:
+            produto *= M[i][j]
+
+        if M[i][j] < 0:
+            cont += 1
+
+        if M[i][j] == encontre:
+            encontrou = (i, j)
+
+print("Produto:", produto)
+print("Quantidade de negativos:", cont)
+print("Posição:", encontrou)
