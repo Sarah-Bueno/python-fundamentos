@@ -12,6 +12,9 @@ Repositório destinado ao armazenamento de exercícios e atividades desenvolvida
 * Listas
 * NumPy
 * Pandas
+* Matriz
+* Dicionários
+* Funções
 
 ## Objetivo
 
